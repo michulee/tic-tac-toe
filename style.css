@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Roboto Mono', monospace;
+    /* overflow: hidden; */
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+nav h1 {
+    color: gray;
+    font-size: 48px;
+}
+
+nav h1:hover {
+    opacity: 0.5;
+}
+
+.container {
+    width: 70%;
+}
+
+main > * {
+    margin: 1em auto;
+}
+
+.card {
+    background-color: pink;
+    /* max-height: 600px; */
+    height: 600px;
+    max-height: 65vmin;
+    width: 600px;
+    /* max-width: 100%; */
+    max-width: 65vmin;
+    /* max-width: 600px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.material-icons {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    /* for some reason, font-size doesn't work here */
+    /* font-size: 48px; */
+    cursor: pointer;
+}
+
+/* e.g. class="material-icons md-48" */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.material-icons:hover {
+    opacity: 0.5;
+}
+
+/* GAME */
+.game-buttons {
+    text-align: center;
+}
+.game-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vmin;
+    /* width: 600px; */
+    /* margin: 2em auto; */
+}
+
+/* GAMEBOARD */
+.game-grid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+}
+
+.game-grid > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+
+.row1-col1 {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.row1-col2 {
+    border-bottom: 1px solid black;
+}
+
+.row1-col3 {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.row2-col1 {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.row2-col2 {
+    border-bottom: 1px solid black;
+}
+
+.row2-col3 {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.row3-col1 {
+    border-right: 1px solid black;
+}
+
+.row3-col2 {
+    /* border-left: 1px solid black; */
+}
+
+.row3-col3 {
+    border-left: 1px solid black;
+}
+
+
+/* PLAYER */
+.player {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+.vs {
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 876px) {
+    nav h1 {
+        font-size: 30px;
+    }
+
+    .player, .vs {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .player, .vs {
+        font-size: 18px;
+    }
+    .container {
+        width: 100%;
+    }
+    .card {
+        max-width: 90vmin;
+        max-height: 90vmin;
+    }
+}
