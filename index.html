@@ -16,21 +16,35 @@
     <div class="container">
         <header>
             <nav>
-                <a href="https://www.theodinproject.com/courses/javascript/lessons/tic-tac-toe-javascript"><h1>Tic-Tac-Toe</h1></a>
+                <!-- <h1><a href="https://www.theodinproject.com/courses/javascript/lessons/tic-tac-toe-javascript">Tic-Tac-Toe</a></h1> -->
+                <!-- semantic tag on outer -->
+                <!-- <a href="https://www.theodinproject.com/courses/javascript/lessons/tic-tac-toe-javascript"><h1>Tic-Tac-Toe</h1></a> -->
             </nav>
         </header>
         <main>
+            <div class="kebab-menu">
+                <button class="material-icons icon-kebab">more_vert</button>
+                <div class="kebab-content-wrapper">
+                    <div class="kebab-menu-content">
+                        <button>New Game</button>
+                        <button>Player Mode</button>
+                        <p>Tic-Tac-Toe repo</p>
+                    </div>
+                </div>
+            </div>
             <div class="game-buttons">
-                <button class="material-icons md-36">refresh</button>
+                <!-- <button class="material-icons md-36">refresh</button> -->
+                <!-- <button>New Game</button> -->
+                <h2>Round 1 of 5</h2>
             </div>
             <div class="game-text">
                 <div class="player player-one">
-                    <div class="player-name">Player One</div>
+                    <div class="player-name">Player One (X)</div>
                     <div class="player-score">10</div>
                 </div>
                 <div class="vs">vs</div>
                 <div class="player player-two">
-                    <div class="player-name">Player Two</div>
+                    <div class="player-name">Player Two (O)</div>
                     <div class="player-score">5</div>
                 </div>
             </div>

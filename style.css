@@ -26,12 +26,12 @@ nav {
     margin-bottom: 1em;
 }
 
-nav h1 {
+nav a {
     color: gray;
     font-size: 48px;
 }
 
-nav h1:hover {
+nav a:hover {
     opacity: 0.5;
 }
 
@@ -44,7 +44,7 @@ main > * {
 }
 
 .card {
-    background-color: pink;
+    background-color: #FABAA2;
     /* max-height: 600px; */
     height: 600px;
     max-height: 65vmin;
@@ -72,6 +72,30 @@ main > * {
 
 .material-icons:hover {
     opacity: 0.5;
+}
+
+/* BUTTONS */
+.icon-kebab {
+}
+
+.kebab-menu {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+}
+
+.kebab-menu-content-wrapper {
+    position: relative;
+}
+
+.kebab-menu-content {
+    /* display: none; */
+    background-color: pink;
+    position: absolute;
+}
+
+.kebab-menu:hover {
+    display: block;
 }
 
 /* GAME */
@@ -149,7 +173,7 @@ main > * {
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .vs {
