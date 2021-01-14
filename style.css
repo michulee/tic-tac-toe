@@ -1,15 +1,3 @@
-.test {
-    /* display: none; */
-    /* color: transparent; */
-}
-
-.row1-col1:hover {
-    color: gray;
-}
-
-.grid-item {
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -30,7 +18,6 @@ body {
     height: 100vh;
     /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Roboto Mono', monospace;
-    /* overflow: hidden; */
 }
 
 .container {
@@ -67,16 +54,11 @@ main > * {
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
-
 .material-icons:hover {
     opacity: 0.5;
 }
 
 /* BUTTONS */
-.icon-kebab {
-    /* right: 0; */
-}
-
 .kebab-menu {
     position: absolute;
     right: 0;
@@ -119,27 +101,7 @@ main > * {
     background-color: gray;
 }
 
-/* how to center links, and make icon unclickable */
-/* .menu-link {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.menu-link a {
-    display: block;
-    z-index: 2;
-}
-
-.menu-link:hover {
-    background-color: gray;
-}
-
-.menu-link i {
-    z-index: 0;
-} */
-
-/* GAME */
+/* GAME TEXT*/
 .margin-right {
     margin-left: auto;
 }
@@ -173,6 +135,10 @@ main > * {
     justify-content: center;
     align-items: center;
     font-size: 48px;
+}
+
+.hover-marker:hover {
+    color: gray;
 }
 
 .row1-col1 {
