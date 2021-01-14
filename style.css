@@ -1,3 +1,15 @@
+.test {
+    /* display: none; */
+    /* color: transparent; */
+}
+
+.row1-col1:hover {
+    color: gray;
+}
+
+.grid-item {
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -19,20 +31,6 @@ body {
     /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Roboto Mono', monospace;
     /* overflow: hidden; */
-}
-
-nav {
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-nav a {
-    color: gray;
-    font-size: 48px;
-}
-
-nav a:hover {
-    opacity: 0.5;
 }
 
 .container {
@@ -76,32 +74,83 @@ main > * {
 
 /* BUTTONS */
 .icon-kebab {
+    /* right: 0; */
 }
 
 .kebab-menu {
     position: absolute;
-    right: 1em;
-    bottom: 1em;
-}
-
-.kebab-menu-content-wrapper {
-    position: relative;
+    right: 0;
+    bottom: 0;
+    /* background-color: pink; */
 }
 
 .kebab-menu-content {
-    /* display: none; */
-    background-color: pink;
+    display: none;
+    right: 20px;
+    bottom: 0;
+    /* background-color: pink; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: absolute;
+    width: 200px;
+    font-family: 'Montserrat';
+    font-size: 16px;
 }
 
-.kebab-menu:hover {
+/* hover over container (only icon shows at first), make content visible */
+/* display:block doesn't do anything to .kebab-menu:hover */
+.kebab-menu:hover .kebab-menu-content {
     display: block;
 }
 
-/* GAME */
-.game-buttons {
-    text-align: center;
+.kebab-menu-content a {
+    width: 100%;
+    /* display: block; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    color: black;
 }
+
+.kebab-menu-content .material-icons:hover {
+    opacity: unset;
+}
+
+.kebab-menu-content a:hover {
+    background-color: gray;
+}
+
+/* how to center links, and make icon unclickable */
+/* .menu-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-link a {
+    display: block;
+    z-index: 2;
+}
+
+.menu-link:hover {
+    background-color: gray;
+}
+
+.menu-link i {
+    z-index: 0;
+} */
+
+/* GAME */
+.margin-right {
+    margin-left: auto;
+}
+
+.game-buttons {
+    display: flex;
+    align-items: center;
+    width: 70vmin;
+    /* width: 600px; */
+}
+
 .game-text {
     display: flex;
     justify-content: center;
