@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="structure.css">
     <link rel="stylesheet" href="style.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,45 +15,59 @@
 </head>
 <body>
     <div class="container">
-        <main>
-            <div class="kebab-menu">
-                <button class="material-icons icon-kebab">more_vert</button>
-                <div class="kebab-menu-content">
-                    <a href="https://github.com/michulee/tic-tac-toe"><i class="material-icons">folder</i>
-                        GitHub Repository</a>
-                    <a href="https://www.theodinproject.com/courses/javascript/lessons/tic-tac-toe-javascript"><i class="material-icons">help</i>
-                        About Project</a>
-                </div>
+        <div class="kebab-menu">
+            <button class="material-icons icon-kebab">more_vert</button>
+            <div class="kebab-menu-content">
+                <a href="https://github.com/michulee/tic-tac-toe"><i class="material-icons">folder</i>
+                    GitHub Repository</a>
+                <a href="https://www.theodinproject.com/courses/javascript/lessons/tic-tac-toe-javascript"><i class="material-icons">help</i>
+                    About Project</a>
             </div>
-            <div class="game-buttons">
-                <h2>Round 1 of 5</h2>
+        </div>
+        <main class="position-centered">
+            <div class="game-header">
+                <div class="game-text">
+                    <div class="player player-one">
+                        <div class="player-score">10</div>
+                        <div class="player-name">Player X</div>
+                    </div>
+                    <div class="player player-two active-player">
+                        <div class="player-score">5</div>
+                        <div class="player-name">Player O</div>
+                    </div>
+                </div>
                 <button class="material-icons md-36 margin-right">add</button>
             </div>
-            <div class="game-text">
-                <div class="player player-one">
-                    <div class="player-name">Player One (X)</div>
-                    <div class="player-score">10</div>
-                </div>
-                <div class="vs">vs</div>
-                <div class="player player-two">
-                    <div class="player-name">Player Two (O)</div>
-                    <div class="player-score">5</div>
-                </div>
-            </div>
-            <div class="card">
+            <div class="card ">
                 <div class="game-grid">
-                    <!-- remove hover marker if they click on it -->
-                    <div class="row1-col1 hover-marker">
-                        <p id="grid-item-0">X</p>
+                    <!-- remove hover marker-container if they click on it -->
+                    <div class="row1-col1 marker-container">
+                        <p id="grid-item-0" class="marker">X</p>
                     </div>
-                    <div class="row1-col2 hover-marker item-1">X</div>
-                    <div class="row1-col3 hover-marker">X</div>
-                    <div class="row2-col1 hover-marker">X</div>
-                    <div class="row2-col2 hover-marker">O</div>
-                    <div class="row2-col3 hover-marker">O</div>
-                    <div class="row3-col1 hover-marker">O</div>
-                    <div class="row3-col2 hover-marker">X</div>
-                    <div class="row3-col3 hover-marker">X</div>
+                    <div class="row1-col2 marker-container">
+                        <p id="grid-item-1" class="marker">O</p>
+                    </div>
+                    <div class="row1-col3 marker-container">
+                        <p id="grid-item-2" class="marker">X</p>
+                    </div>
+                    <div class="row2-col1 marker-container">
+                        <p id="grid-item-3" class="marker">O</p>
+                    </div>
+                    <div class="row2-col2 marker-container">
+                        <p id="grid-item-4" class="marker">O</p>
+                    </div>
+                    <div class="row2-col3 marker-container">
+                        <p id="grid-item-5" class="marker">X</p>
+                    </div>
+                    <div class="row3-col1 marker-container">
+                        <p id="grid-item-6" class="marker">X</p>
+                    </div>
+                    <div class="row3-col2 marker-container">
+                        <p id="grid-item-7" class="marker">O</p>
+                    </div>
+                    <div class="row3-col3 marker-container">
+                        <p id="grid-item-8" class="marker">O</p>
+                    </div>
                 </div>
             </div>
         </main>

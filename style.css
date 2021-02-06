@@ -1,45 +1,3 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-img {
-    height: 100%;
-}
-
-a {
-    text-decoration: none;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    /* font-family: 'Montserrat', sans-serif; */
-    font-family: 'Roboto Mono', monospace;
-}
-
-.container {
-    width: 70%;
-}
-
-main > * {
-    margin: 1em auto;
-}
-
-.card {
-    background-color: #FABAA2;
-    /* max-height: 600px; */
-    height: 600px;
-    max-height: 65vmin;
-    width: 600px;
-    /* max-width: 100%; */
-    max-width: 65vmin;
-    /* max-width: 600px; */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .material-icons {
     background-color: transparent;
     border: none;
@@ -61,21 +19,19 @@ main > * {
 /* BUTTONS */
 .kebab-menu {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    /* background-color: pink; */
+    right: 0.5rem;
+    bottom: 0.5rem;
 }
 
 .kebab-menu-content {
     display: none;
-    right: 20px;
+    right: 1.5rem;
     bottom: 0;
-    /* background-color: pink; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: absolute;
     width: 200px;
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /* hover over container (only icon shows at first), make content visible */
@@ -102,27 +58,47 @@ main > * {
 }
 
 /* GAME TEXT*/
+
+
 .margin-right {
     margin-left: auto;
 }
 
-.game-buttons {
+.game-header {
     display: flex;
-    align-items: center;
-    width: 70vmin;
+    justify-content: flex-start;
+    /* align-items: center; */
+    /* width: 70vmin; */
     /* width: 600px; */
 }
 
 .game-text {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70vmin;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+
+    /* justify-content: center; */
+    /* align-items: center; */
     /* width: 600px; */
     /* margin: 2em auto; */
 }
 
 /* GAMEBOARD */
+.card {
+    background-color: #FABAA2;
+    margin-top: 10%;
+    /* max-height: 600px; */
+    height: 600px;
+    max-height: 65vmin;
+    width: 600px;
+    /* max-width: 100%; */
+    max-width: 65vmin;
+    /* max-width: 600px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .game-grid {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -137,8 +113,13 @@ main > * {
     font-size: 48px;
 }
 
-.hover-marker:hover {
-    color: gray;
+.marker {
+    opacity: 0;
+}
+
+/* order of class matters */
+.marker-container:hover .marker {
+    opacity: 0.5;
 }
 
 .row1-col1 {
@@ -181,39 +162,65 @@ main > * {
     border-left: 1px solid black;
 }
 
-
 /* PLAYER */
+.active-player {
+    opacity: 1 !important;
+}
+
 .player {
     display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 20px;
+    font-size: 1.5rem;
+    opacity: 0.5;
 }
 
-.vs {
-    font-size: 24px;
+.player-score {
+    text-align: right;
+    width: 2rem;
+    margin-right: 1rem;
 }
 
-@media only screen and (max-width: 876px) {
-    nav h1 {
-        font-size: 30px;
+/* Mobile L */
+@media only screen and (max-width: 540px) {
+    .player {
+        font-size: 1.3rem;
     }
 
-    .player, .vs {
-        font-size: 20px;
-    }
-}
-
-@media only screen and (max-width: 425px) {
-    .player, .vs {
-        font-size: 18px;
-    }
-    .container {
+    .container, .game-header {
         width: 100%;
     }
     .card {
-        max-width: 90vmin;
-        max-height: 90vmin;
+        max-width: 80vmin;
+        max-height: 80vmin;
+    }
+
+    .marker-container {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile M */
+@media only screen and (max-width: 375px) {
+    .player {
+        /* font-size: 1.3rem; */
+    }
+
+    .game-header {
+        width: 100%;
+    }
+}
+
+/* Mobile S */
+@media only screen and (max-width: 320px) {
+    .player {
+        font-size: 1.1rem;
+    }
+
+    .marker-container {
+        font-size: 2rem;
+    }
+
+    .kebab-menu-content {
+        font-size: 0.9rem;
+        width: 170px;
     }
 }
